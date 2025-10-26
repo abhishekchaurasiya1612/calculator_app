@@ -15,8 +15,14 @@ while True:
         "3. div\n" \
         "4. mul\n" \
         "5. avg\n" )
-
     select= int(input("Select a operation from 1,2,3,4: "))
+    if select == '5':     #or select.lower() in ['exit' , 'quit' , 'q']:
+        print("Exit the calculator")
+        break
+    if select not in [1,2,3,4]:
+        print("Invalid selection.")
+        continue
+
     n1= int(input("Enter 1st number"))
     n2= int(input("Enter 2nd number"))
 
@@ -32,7 +38,7 @@ while True:
         print(n1, "/", n2, "=", \
                 div_num(n1,n2))
     elif select == 4:
-        print(n1, "-", n2, "=", \
+        print(n1, "*", n2, "=", \
                 mul_num(n1,n2))
     # elif select == 5:
     #        print(" (",n1, "+", n2,")", "/","2","=", \
