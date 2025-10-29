@@ -1,13 +1,5 @@
-def add_num(num1,num2):
-    return num1+num2
-def sub_num(num1,num2):
-    return num1-num2
-def div_num(num1,num2):
-    return num1/num2
-def mul_num(num1,num2):
-    return num1*num2
-# def avg_num(num1,num2):
-#     return (num1+num2)/2
+from operations import *
+
 while True:
     print("Pls select operation:\n " \
         "1. Add\n" \
@@ -15,14 +7,10 @@ while True:
         "3. div\n" \
         "4. mul\n" \
         "5. avg\n" )
-    select= int(input("Select a operation from 1,2,3,4: "))
-    if select == '5':     #or select.lower() in ['exit' , 'quit' , 'q']:
-        print("Exit the calculator")
-        break
-    if select not in [1,2,3,4]:
-        print("Invalid selection.")
-        continue
+    select= int(input("Select a operation from 1,2,3,4,5: "))
 
+    if select == 5:
+        break
     n1= int(input("Enter 1st number"))
     n2= int(input("Enter 2nd number"))
 
@@ -40,8 +28,5 @@ while True:
     elif select == 4:
         print(n1, "*", n2, "=", \
                 mul_num(n1,n2))
-    # elif select == 5:
-    #        print(" (",n1, "+", n2,")", "/","2","=", \
-    #             savg_num(n1,n2))
     else:
-            print("Invalid operation!") 
+        print("Invalid selection")
