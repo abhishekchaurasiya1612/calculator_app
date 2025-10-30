@@ -5,7 +5,10 @@ def add_num(num1,num2):
 def sub_num(num1,num2):
     return num1-num2
 def div_num(num1,num2):
-    return num1/num2
+    try:
+        return num1/num2
+    except ZeroDivisionError:
+        return "Can't divide by zero"
 def mul_num(num1,num2):
     return num1*num2
 def square_num(num1):

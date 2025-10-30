@@ -11,8 +11,14 @@ while True:
         "7. Power\n" \
         "8. Fcatorial\n" \
         "9. Exit\n" )
-    select= int(input("Select a operation from 1,2,3,4,5,6,7,8,9: "))
-
+    
+    try:
+        select= int(input("Select a operation from 1,2,3,4,5,6,7,8,9: "))
+    except KeyboardInterrupt:
+        break
+    except TypeError:
+        print("You have entered a string")
+        
     if select == 9:
         break
     n1= int(input("Enter 1st number"))
